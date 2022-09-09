@@ -10,7 +10,8 @@ class InventoryControl extends React.Component {
     this.state = {
       formVisibleOnPage: false,
       mainInventoryList: [],
-      selectedInventory: null
+      selectedInventory: null,
+      editing: false
     };
   }
 
@@ -18,7 +19,6 @@ class InventoryControl extends React.Component {
     if (this.state.selectedInventory != null) {
       this.setState({
         formVisibleOnPage: false,
-        selectedInventory: null,
         editing: false
       });
     } else {
@@ -44,18 +44,6 @@ class InventoryControl extends React.Component {
     this.setState({ selectedInventory: selectedInventory });
   };
 
-  handleDeletingInventory = id => {
-    const newMainInventoryList = this.state.mainInventoryList.filter(
-      inventory => inventory.id !== id
-    );
-    this.state = {
-      formVisibleOnPage: false,
-      mainInventoryList: [],
-      selectedInventory: null,
-      editing: false
-    };
-  };
-
   handleEditClick = () => {
     console.log('handleEditClick reached!');
     this.setState({ editing: true });
@@ -72,10 +60,27 @@ class InventoryControl extends React.Component {
     });
   };
 
+  handleDeletingInventory = id => {
+    const newMainInventoryList = this.state.mainInventoryList.filter(
+      inventory => inventory.id !== id
+    );
+    this.setState({
+      mainInventoryList: newMainInventoryList,
+      selectedInventory: null
+    });
+  };
+
+  handleSellingInventory = (quantity) => {
+    const updatedQuantity = quantity - 1;
+    
+  };
+
+
+
+
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
-
     if (this.state.editing) {
       currentlyVisibleState = (
         <EditInventoryForm
@@ -107,12 +112,13 @@ class InventoryControl extends React.Component {
           onInventorySelection={this.handleChangingSelectedInventory}
         />
       );
+
       buttonText = 'Add Inventory';
     }
     return (
       <React.Fragment>
         {currentlyVisibleState}
-        <button onClick={this.handleClick}>{buttonText}</button>{' '}
+        <button onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
     );
   }
