@@ -12,6 +12,7 @@ function InventoryList(props) {
           names={inventory.names}
           location={inventory.location}
           issue={inventory.issue}
+          quantity={inventory.quantity}
           id={inventory.id}
           key={inventory.id}
         />
