@@ -11,6 +11,10 @@ function Inventory(props) {
         <p>
           <em>{props.issue}</em>
         </p>
+        <p>
+          Quantity:
+          <em>{props.quantity}</em>
+        </p>
         <hr />
       </div>
     </React.Fragment>
@@ -21,8 +25,9 @@ Inventory.propTypes = {
   names: PropTypes.string,
   location: PropTypes.string,
   issue: PropTypes.string,
-  id: PropTypes.string, // new PropType
-  whenInventoryClicked: PropTypes.func // new PropType
+  quantity: PropTypes.number,
+  id: PropTypes.string,
+  whenInventoryClicked: PropTypes.func
 };
 
 export default Inventory;
