@@ -11,6 +11,7 @@ function EditInventoryForm(props) {
       names: event.target.names.value,
       location: event.target.location.value,
       issue: event.target.issue.value,
+      quantity: parseInt(event.target.quantity.value),
       id: inventory.id
     });
   }
