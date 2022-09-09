@@ -12,7 +12,16 @@ function InventoryDetail(props) {
       <p>
         <em>{inventory.issue}</em>
       </p>
-      <button onClick={props.onClickingEdit}>Update Inventory</button>
+      <p>
+        Quantity:
+        <em>{inventory.quantity}</em>
+      </p>
+      <button onClick={props.onClickingSell}>
+        Sell
+      </button>
+      <button onClick={props.onClickingEdit}>
+        Update Inventory
+      </button>
       <button onClick={() => props.onClickingDelete(inventory.id)}>
         Close Inventory
       </button>
