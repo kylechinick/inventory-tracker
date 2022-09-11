@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Inventory Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### By _**Kyle Chinick**_
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+This app tracks user inventory of products.
 
-### `npm start`
+A user can create a new product via a form, can change that product via a seperate form (that makes use of the new product form template), and can delete a product.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Additionally, users have the ability to sell a single unit of the selected product which causes that product's quantity to decrease by 1 unit. _NOTE: this feature is still in development, the current version of this app will reflect the quantity decrease only in the console._
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- _HTML / CSS_
+- _React_
+- _JavaScript / JSX_
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup/Installation Requirements
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone this repository to your desktop by executing `git clone https://github.com/kylechinick/inventory-tracker.git` in your preferred terminal application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. In the terminal, cd into the project directory then execute `npm install`.
 
-### `npm run eject`
+3. Execute `npm run start` to build and then run a development version of the app on your local machine.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Component Diagram
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+For reference, below is a component diagram intended to clarify the ownership and relationships of each app component.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Component Diagram](./src/img/component_diagram.png)
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Known Bugs
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- The decrement feature for selling a single unit of inventory functions partially as intended – causing the selected product to decrement but does not add the modified product to a new/current state. This results in being able to see the quantity change in the console only. Also because of not currently having the updated value set to a new state repeatedly clicking the "sell" button will infinitely decrement the inventory item from X to X-1 since without the new state the function repeatedly re-references the original quantity to decrement).
