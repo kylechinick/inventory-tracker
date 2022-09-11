@@ -40,4 +40,6 @@ For reference, below is a component diagram intended to clarify the ownership an
 
 ## Known Bugs
 
-- The decrement feature for selling a single unit of inventory functions partially as intended – causing the selected product to decrement but does not add the modified product to a new/current state. This results in being able to see the quantity change in the console only. Also because of not currently having the updated value set to a new state repeatedly clicking the "sell" button will infinitely decrement the inventory item from X to X-1 since without the new state the function repeatedly re-references the original quantity to decrement).
+- The decrement feature for selling a single unit of inventory functions partially as intended – causing the selected product to decrement but does not add the modified product to a new/current state.
+  - This results in being able to see the quantity change in the console only.
+  - Also because of not currently having the updated value set to a new state repeatedly clicking the "sell" button will infinitely decrement the inventory item from X to X-1 since without the new state the function repeatedly re-references the original quantity to decrement).
