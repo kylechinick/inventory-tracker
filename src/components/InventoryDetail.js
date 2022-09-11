@@ -16,7 +16,7 @@ function InventoryDetail(props) {
         Quantity:
         <em>{inventory.quantity}</em>
       </p>
-      <button onClick={() => props.onClickingSell(inventory.id, inventory.quantity)}>
+      <button onClick={() => props.onClickingSell(inventory.quantity)}>
         Sell 1 Unit
       </button>
       <button onClick={props.onClickingEdit}>Update Inventory</button>

@@ -70,13 +70,15 @@ class InventoryControl extends React.Component {
     });
   };
 
-  handleSellingInventory = (quantity) => {
-    const updatedQuantity = quantity - 1;
-    
+  handleSellingInventory = quantity => {
+    console.log(this.state);
+    const updatedQuantity = this.state.selectedInventory.quantity - 1;
+    console.log(this.state);
+    console.log(updatedQuantity);
+    this.setState({ updatedQuantity: updatedQuantity });
+    console.log(this.state);
+    console.log(updatedQuantity);
   };
-
-
-
 
   render() {
     let currentlyVisibleState = null;
@@ -95,6 +97,7 @@ class InventoryControl extends React.Component {
           inventory={this.state.selectedInventory}
           onClickingDelete={this.handleDeletingInventory}
           onClickingEdit={this.handleEditClick}
+          onClickingSell={this.handleSellingInventory}
         />
       );
       buttonText = 'Return to Inventory List';
