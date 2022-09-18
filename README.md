@@ -15,6 +15,7 @@ Additionally, users have the ability to sell a single unit of the selected produ
 ## Technologies Used
 
 - _HTML / CSS_
+- _Node_
 - _React_
 - _JavaScript / JSX_
 
