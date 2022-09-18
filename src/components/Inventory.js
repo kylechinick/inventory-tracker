@@ -22,10 +22,10 @@ function Inventory(props) {
 }
 
 Inventory.propTypes = {
-  names: PropTypes.string,
-  location: PropTypes.string,
-  issue: PropTypes.string,
-  quantity: PropTypes.number,
+  names: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  issue: PropTypes.string.isRequired,
+  quantity: PropTypes.number.isRequired,
   id: PropTypes.string,
   whenInventoryClicked: PropTypes.func
 };
