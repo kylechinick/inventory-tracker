@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 function Inventory(props) {
   return (
     <React.Fragment>
-      <div className='inventory-block' onClick={() => props.whenInventoryClicked(props.id)}>
+      <div
+        className='inventory-block'
+        onClick={() => props.whenInventoryClicked(props.id)}>
         <h3>
           {props.location} - {props.names}
         </h3>
@@ -13,9 +15,8 @@ function Inventory(props) {
         </p>
         <p>
           Quantity:
-          <em>{props.quantity}</em>
+          <em> {props.quantity}</em>
         </p>
-        <hr />
       </div>
     </React.Fragment>
   );

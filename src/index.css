@@ -1,15 +1,107 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   font-family: 'Jura', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* border: 1px dotted red; */
+  background-color: rgb(33, 33, 33);
+  color: rgba(227, 227, 227, 1);
 }
 
 header {
-  background-color: red;
+  padding: 1rem;
+  border-bottom: 1px solid rgb(255, 179, 0.4);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
 }
 
 .inventory-block {
-  background-color: greenyellow;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  border: 2px solid rgba(227, 227, 227, 0.4);
+  border-radius: 0.2rem;
+  padding: 1rem;
+}
+
+.inventory-block:hover {
+  border-color: rgba(227, 227, 227, 0.6);
+}
+
+.inventory-block:active {
+  border-color: rgba(227, 227, 227, 0.8);
+}
+
+.inventory-block:active > h3,
+.inventory-block:active > p,
+.inventory-block:active > p > em {
+  color: rgba(227, 227, 227, 0.5);
+}
+
+button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  border-style: solid;
+  border-width: 2px;
+}
+#main-button {
+  cursor: pointer;
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  border-color: rgb(255, 179, 0.4);
+  border-radius: 0.2rem;
+  width: fit-content;
+}
+
+#main-button:hover {
+  border-color: rgb(255, 179, 0.6);
+}
+
+#main-button:active {
+  border-color: rgb(255, 179, 0.8);
+}
+
+form > button {
+  margin-top: 1rem;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-color: rgb(227, 227, 227, 0.4);
+}
+
+form > button:hover {
+  border-color: rgb(227, 227, 227, 0.6);
+}
+
+form > button:hover {
+  border-color: rgb(227, 227, 227, 0.8);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+input,
+textarea {
+  /* border: 1px solid rgba(227, 227, 227, 0.4); */
+  border: none;
+  padding: 0.4rem;
+  outline: 2px solid rgb(227, 227, 227, 0.4);
+  margin-top: 1rem;
+}
+
+input:hover,
+textarea:hover {
+  outline-color: rgba(227, 227, 227, 0.6);
+}
+
+input:focus,
+textarea:focus {
+  outline-color: rgba(227, 227, 227, 0.8);
 }

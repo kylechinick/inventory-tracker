@@ -122,8 +122,12 @@ class InventoryControl extends React.Component {
     }
     return (
       <React.Fragment>
-        {currentlyVisibleState}
-        <button onClick={this.handleClick}>{buttonText}</button>
+        <main>
+          {currentlyVisibleState}
+          <button id='main-button' onClick={this.handleClick}>
+            {buttonText}
+          </button>
+        </main>
       </React.Fragment>
     );
   }

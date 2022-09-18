@@ -23,8 +23,6 @@ function InventoryDetail(props) {
       <button onClick={() => props.onClickingDelete(inventory.id)}>
         Close Inventory
       </button>
-
-      <hr />
     </React.Fragment>
   );
 }
