@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import InventoryList from './InventoryList';
 
 function InventoryDetail(props) {
   const { inventory } = props;
