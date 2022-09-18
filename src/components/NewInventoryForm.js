@@ -17,6 +17,7 @@ function NewInventoryForm(props) {
 
   return (
     <React.Fragment>
+      <h1>Create New Inventory</h1>
       <ReusableForm
         formSubmissionHandler={handleNewInventoryFormSubmission}
         buttonText='Submit'

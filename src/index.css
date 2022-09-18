@@ -20,6 +20,15 @@ main {
   padding: 1rem;
 }
 
+.site-title {
+  font-size: 1.5rem;
+}
+
+h1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .inventory-block {
   cursor: pointer;
   margin-bottom: 1rem;
@@ -66,18 +75,19 @@ button {
   border-color: rgb(255, 179, 0.8);
 }
 
-form > button {
+.secondary-button {
   margin-top: 1rem;
   width: fit-content;
   padding: 0.5rem 1rem;
   border-color: rgb(227, 227, 227, 0.4);
+  margin-right: 1rem;
 }
 
-form > button:hover {
+.secondary-button:hover {
   border-color: rgb(227, 227, 227, 0.6);
 }
 
-form > button:hover {
+.secondary-button:hover {
   border-color: rgb(227, 227, 227, 0.8);
 }
 
@@ -89,7 +99,6 @@ form {
 
 input,
 textarea {
-  /* border: 1px solid rgba(227, 227, 227, 0.4); */
   border: none;
   padding: 0.4rem;
   outline: 2px solid rgb(227, 227, 227, 0.4);
@@ -104,4 +113,17 @@ textarea:hover {
 input:focus,
 textarea:focus {
   outline-color: rgba(227, 227, 227, 0.8);
+}
+
+.inventory-detail {
+  border: 2px solid rgba(227, 227, 227, 0.4);
+  border-radius: 0.2rem;
+  padding: 1rem;
+}
+
+.inventory-detail h2,
+.inventory-detail p,
+.inventory-detail p > em,
+.inventory-detail button {
+  margin-top: 1rem;
 }

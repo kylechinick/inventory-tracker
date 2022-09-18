@@ -9,7 +9,7 @@ function ReusableForm(props) {
         <input type='text' name='location' placeholder='Location' />
         <textarea name='issue' placeholder='Describe your issue.' />
         <input type='number' name='quantity' placeholder='130' required />
-        <button type='submit'>{props.buttonText}</button>
+        <button className='secondary-button' type='submit'>{props.buttonText}</button>
       </form>
     </React.Fragment>
   );
