@@ -19,6 +19,7 @@ class InventoryControl extends React.Component {
     if (this.state.selectedInventory != null) {
       this.setState({
         formVisibleOnPage: false,
+        selectedInventory: null,
         editing: false
       });
     } else {
@@ -117,7 +118,6 @@ class InventoryControl extends React.Component {
           onInventorySelection={this.handleChangingSelectedInventory}
         />
       );
-
       buttonText = 'Add Inventory';
     }
     return (
