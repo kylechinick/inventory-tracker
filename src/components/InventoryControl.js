@@ -70,14 +70,16 @@ class InventoryControl extends React.Component {
     });
   };
 
-  handleSellingInventory = quantity => {
-    console.log(this.state);
-    const updatedQuantity = this.state.selectedInventory.quantity - 1;
-    console.log(this.state);
-    console.log(updatedQuantity);
-    this.setState({ updatedQuantity: updatedQuantity });
-    console.log(this.state);
-    console.log(updatedQuantity);
+  handleSellingInventory = () => {
+    const inventoryToDecrement = this.state.selectedInventory;
+    if (this.state.selectedInventory.quantity !== 0) {
+      const quantityToDecrement = {
+        quantity: (inventoryToDecrement.quantity -= 1)
+      };
+      this.handleChangingSelectedInventory(quantityToDecrement.id);
+    } else {
+      this.handleChangingSelectedInventory(this.state.selectedInventory.id);
+    }
   };
 
   render() {
