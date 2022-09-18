@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function InventoryDetail(props) {
-  const { inventory, onClickingDelete, onClickingSell } = props;
+  const { inventory } = props;
   return (
     <React.Fragment>
       <h1>Inventory Detail</h1>
