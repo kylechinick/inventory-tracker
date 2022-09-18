@@ -1,6 +1,6 @@
 # Inventory Tracker
 
-#### By _**Kyle Chinick**_
+By _**Kyle Chinick**_
 
 ## Description
 
